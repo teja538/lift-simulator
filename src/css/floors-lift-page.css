@@ -1,0 +1,22 @@
+.floor {
+    border-bottom: 2px solid black;
+    display: flex;
+}
+
+.floor-btn {
+    margin: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2rem;
+}
+
+.lift {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+}
+
+.floor-num {
+    margin-left:auto;
+}
