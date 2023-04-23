@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    height: 90vh;
+    width: 100vw;
+}
+.heading {
+    text-align: center;
+}
+
+.form {
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+form {
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 2rem;
+}
+
+.input-field {
+    display: block;
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+
+.label {
+    font-size: 1.2rem;
+}
+
+.submit-button {
+    padding: 8px 16px;
+    background-color: green;
+    color: white;
+    border: 1px solid darkgreen;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.submit-button:hover {
+    background-color: rgba(1, 101, 1, 0.924);
+}
