@@ -6,22 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lift-simulator</title>
     <link rel="stylesheet" href="./css/main.css">
-    <script src="./js/main.js"></script>
 </head>
 <body>
     <div class="heading">
         <h1>Lift Simulator</h1>
     </div>
     <div class="form">
-        <form action="./html/floors-lift-page.html">
+        <form id="form" action="./html/floors-lift-page.html">
             <label for="floors" class="label">Enter number of Floors:</label>
             <input type="number" min="0" max="50" id="floorsCount" class="input-field">
             <label for="lifts" class="label">Enter number of Lifts:</label>
             <input type="number" min="0" max="50" id="liftsCount" class="input-field">
-            <button type="submit" class="submit-button">Submit</button>
+            <button id="submit-btn" type="submit" class="submit-button">Submit</button>
         </form>
     </div>
     
-    <button><a href="./html/floors-lift-page.html">get lifts and floors</a></button>
+    <script src="./js/main.js"></script>
 </body>
 </html>
