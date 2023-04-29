@@ -6,11 +6,16 @@ const floorDiv = document.querySelector(".floor");
 
 console.log(floorsCount, liftsCount);
 createFloors(floorsCount, liftsCount);
+
 function createFloors(floorsCount, liftsCount) {
+  floorsLifts = document.createElement("div");
+  floorsLifts.classList.add("floors-lifts");
+  document.body.appendChild(floorsLifts);
+
   for (var i = 0; i < floorsCount; i++) {
     const floorDiv = document.createElement("div");
     floorDiv.classList.add("floor");
-    document.body.appendChild(floorDiv);
+    floorsLifts.appendChild(floorDiv);
 
     const floorBtnDiv = document.createElement("div");
     floorBtnDiv.classList.add("floor-btn");
@@ -21,18 +26,16 @@ function createFloors(floorsCount, liftsCount) {
     button1.textContent = "Up";
     button2.textContent = "Down";
     floorBtnDiv.append(button1, button2);
-    // floorBtnDiv.appendChild(button1);
-    // floorBtnDiv.appendChild(button2);
 
     const floorNum = document.createElement("h2");
-    floorNum.innerText = "floor num";
+    floorNum.innerText = "floor  " + (floorsCount - i);
     floorNum.classList.add("floor-num");
     floorDiv.appendChild(floorNum);
   }
 
   liftsDiv = document.createElement("div");
   liftsDiv.classList.add("lifts");
-  document.body.appendChild(liftsDiv);
+  floorsLifts.appendChild(liftsDiv);
 
   for (var i = 0; i < liftsCount; i++) {
     const lift = document.createElement("div");

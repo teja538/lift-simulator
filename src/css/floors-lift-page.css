@@ -1,3 +1,7 @@
+.floors-lifts{
+    position: relative;
+}
+
 .floor {
     border-bottom: 2px solid black;
     display: flex;
@@ -11,11 +15,24 @@
     row-gap: 2rem;
 }
 
+/* .floor:nth-child(2){
+    background-color: blue;
+} */
+
+/* button:nth-child(1) {
+    color: red;
+    background-color: aquamarine;
+} */
+
+
+
 .lifts {
     display: flex;
     column-gap: 24px;
     margin-bottom: 100px;
-    margin-left: 100px
+    margin-left: 100px;
+    position:absolute;
+    bottom: -96px
 }
 
 .lift-container {
