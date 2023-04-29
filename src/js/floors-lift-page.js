@@ -17,22 +17,32 @@ function createFloors(floorsCount, liftsCount) {
     floorDiv.appendChild(floorBtnDiv);
 
     const button1 = document.createElement("button");
-    const button2 = document.createElement("button2");
+    const button2 = document.createElement("button");
     button1.textContent = "Up";
     button2.textContent = "Down";
-    //   floorBtnDiv.append(button1, button2);
-    floorBtnDiv.appendChild(button1);
-    floorBtnDiv.appendChild(button2);
-
-    const liftDiv = document.createElement("div");
-    liftDiv.classList.add("lift");
-    floorDiv.appendChild(liftDiv);
+    floorBtnDiv.append(button1, button2);
+    // floorBtnDiv.appendChild(button1);
+    // floorBtnDiv.appendChild(button2);
 
     const floorNum = document.createElement("h2");
     floorNum.innerText = "floor num";
     floorNum.classList.add("floor-num");
     floorDiv.appendChild(floorNum);
+  }
 
-    document.body.appendChild(floorDiv);
+  liftsDiv = document.createElement("div");
+  liftsDiv.classList.add("lifts");
+  document.body.appendChild(liftsDiv);
+
+  for (var i = 0; i < liftsCount; i++) {
+    const lift = document.createElement("div");
+    lift.classList.add("lift-container");
+    liftsDiv.appendChild(lift);
+
+    const leftDoor = document.createElement("div");
+    leftDoor.classList.add("left-door");
+    const rightDoor = document.createElement("div");
+    rightDoor.classList.add("right-door");
+    lift.append(leftDoor, rightDoor);
   }
 }
