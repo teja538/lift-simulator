@@ -12,7 +12,7 @@ function createFloors(floorsCount, liftsCount) {
   floorsLifts.classList.add("floors-lifts");
   document.body.appendChild(floorsLifts);
 
-  for (var i = 0; i < floorsCount; i++) {
+  for (let i = 0; i < floorsCount; i++) {
     const floorDiv = document.createElement("div");
     floorDiv.classList.add("floor");
     floorsLifts.appendChild(floorDiv);
@@ -21,11 +21,19 @@ function createFloors(floorsCount, liftsCount) {
     floorBtnDiv.classList.add("floor-btn");
     floorDiv.appendChild(floorBtnDiv);
 
-    const button1 = document.createElement("button");
-    const button2 = document.createElement("button");
-    button1.textContent = "Up";
-    button2.textContent = "Down";
-    floorBtnDiv.append(button1, button2);
+    if (i !== floorsCount - 1) {
+      const buttonUp = document.createElement("button");
+      buttonUp.textContent = "Up";
+      buttonUp.onclick = (e) => liftReqUp(e, floorsCount - i);
+      floorBtnDiv.appendChild(buttonUp);
+    }
+
+    if (i !== 0) {
+      const buttonDown = document.createElement("button");
+      buttonDown.textContent = "Down";
+      buttonDown.onclick = (e) => liftReqDown(e, floorsCount - i);
+      floorBtnDiv.appendChild(buttonDown);
+    }
 
     const floorNum = document.createElement("h2");
     floorNum.innerText = "floor  " + (floorsCount - i);
@@ -37,7 +45,7 @@ function createFloors(floorsCount, liftsCount) {
   liftsDiv.classList.add("lifts");
   floorsLifts.appendChild(liftsDiv);
 
-  for (var i = 0; i < liftsCount; i++) {
+  for (let i = 0; i < liftsCount; i++) {
     const lift = document.createElement("div");
     lift.classList.add("lift-container");
     liftsDiv.appendChild(lift);
@@ -49,3 +57,12 @@ function createFloors(floorsCount, liftsCount) {
     lift.append(leftDoor, rightDoor);
   }
 }
+
+function liftReqUp(e, i) {
+  console.log(e, i);
+}
+
+function liftReqDown(e, i) {
+  console.log(e, i);
+}
+

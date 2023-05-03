@@ -5,6 +5,7 @@
 .floor {
     border-bottom: 2px solid black;
     display: flex;
+    height: 102px;
 }
 
 .floor-btn {
@@ -14,16 +15,6 @@
     justify-content: center;
     row-gap: 2rem;
 }
-
-/* .floor:nth-child(2){
-    background-color: blue;
-} */
-
-/* button:nth-child(1) {
-    color: red;
-    background-color: aquamarine;
-} */
-
 
 
 .lifts {
@@ -45,14 +36,16 @@
 .left-door {
     width: 50%;
     height: 100px;
-    background-color: orange;
+    background-color: skyblue;
     border: 1px solid grey;
+    animation-name: lift-movememt;
+    animation-duration: 2s;
 }
 
 .right-door {
     width: 50%;
     height: 100px;
-    background-color: red;
+    background-color: skyblue;
     text-align: right;
     border: 1px solid grey;
 }
@@ -60,4 +53,9 @@
 
 .floor-num {
     margin-left:auto;
+}
+
+@keyframes lift-movement {
+    from {background-color: green;}
+  to {background-color: blue;}
 }
